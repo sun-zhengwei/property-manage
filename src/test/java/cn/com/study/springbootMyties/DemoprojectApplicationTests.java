@@ -1,4 +1,4 @@
-package cn.stephen.study.demoproject;
+package cn.com.study.springbootMyties;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

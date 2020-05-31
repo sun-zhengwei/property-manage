@@ -1,8 +1,8 @@
-package cn.stephen.study.demoproject.controller;
+package cn.com.study.springbootMyties.controller;
 
 
-import cn.stephen.study.demoproject.entity.UserEntity;
-import cn.stephen.study.demoproject.service.UserService;
+import cn.com.study.springbootMyties.entity.UserEntity;
+import cn.com.study.springbootMyties.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

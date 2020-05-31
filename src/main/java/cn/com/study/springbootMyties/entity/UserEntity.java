@@ -1,4 +1,4 @@
-package cn.stephen.study.demoproject.entity;
+package cn.com.study.springbootMyties.entity;
 
 public class UserEntity {
 

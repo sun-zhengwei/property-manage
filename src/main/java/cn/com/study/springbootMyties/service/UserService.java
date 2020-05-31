@@ -1,7 +1,7 @@
-package cn.stephen.study.demoproject.service;
+package cn.com.study.springbootMyties.service;
 
-import cn.stephen.study.demoproject.dao.UserDao;
-import cn.stephen.study.demoproject.entity.UserEntity;
+import cn.com.study.springbootMyties.dao.UserDao;
+import cn.com.study.springbootMyties.entity.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

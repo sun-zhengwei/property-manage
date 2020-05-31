@@ -1,4 +1,4 @@
-package cn.stephen.study.demoproject.config.dao;
+package cn.com.study.springbootMyties.config.dao;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.springframework.beans.factory.annotation.Value;

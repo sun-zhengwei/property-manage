@@ -1,4 +1,4 @@
-package cn.stephen.study.demoproject.config.service;
+package cn.com.study.springbootMyties.config.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -9,9 +9,6 @@ import org.springframework.transaction.annotation.TransactionManagementConfigure
 
 import javax.sql.DataSource;
 
-/**
- * 事务配置类，不可缺少，尚未知具体作用
- */
 @Configuration
 @EnableTransactionManagement
 public class TransactionManagementConfiguration implements TransactionManagementConfigurer{

@@ -1,6 +1,6 @@
-package cn.stephen.study.demoproject.dao;
+package cn.com.study.springbootMyties.dao;
 
-import cn.stephen.study.demoproject.entity.UserEntity;
+import cn.com.study.springbootMyties.entity.UserEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
