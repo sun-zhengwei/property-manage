@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <property name="LOG_PATH">/log/springBoot-MyBatis</property>
+        <property name="error.log.file.name">${LOG_PATH}/restfulapi.log</property>
+        <property name="error.log.file.name.pattern">${error.log.file.name}.%d{yyyy-MM-dd}
+        </property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+
+        <RollingRandomAccessFile name="restfulapi.log" fileName="${error.log.file.name}"
+                                 filePattern="${error.log.file.name.pattern}">
+            <PatternLayout
+                    pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+        </RollingRandomAccessFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="org.springframework.web" level="debug" additivity="false">
+            <AppenderRef ref="restfulapi.log"/>
+            <AppenderRef ref="Console"/>
+        </Logger>
+        <Logger name="org.quartz.core" level="error" additivity="false">
+            <AppenderRef ref="restfulapi.log"/>
+            <AppenderRef ref="Console"/>
+        </Logger>
+        <Logger name="com.property.manage" level="debug" additivity="false">
+            <AppenderRef ref="restfulapi.log"/>
+            <AppenderRef ref="Console"/>
+        </Logger>
+
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="restfulapi.log"/>
+        </Root>
+    </Loggers>
+</Configuration>
