@@ -40,7 +40,7 @@
 		<commons-io.version>2.6</commons-io.version>
 		<commons-codec.version>1.11</commons-codec.version>
 		<commons-fileupload.version>1.3.3</commons-fileupload.version>
-		<commons-beanutils.version>1.9.3</commons-beanutils.version>
+		<commons-beanutils.version>1.9.4</commons-beanutils.version>
 		<commons-text.version>1.6</commons-text.version>
 
 		<jjwt.version>0.6.0</jjwt.version>
