@@ -4,6 +4,7 @@ import cn.afterturn.easypoi.entity.vo.NormalExcelConstants;
 import cn.afterturn.easypoi.excel.entity.ExportParams;
 import cn.afterturn.easypoi.excel.entity.enmus.ExcelType;
 import cn.afterturn.easypoi.view.PoiBaseView;
+import com.github.pagehelper.Page;
 import com.property.manage.dao.model.User;
 import com.property.manage.dao.model.excel.UserExcel;
 import com.property.manage.service.UserServiceImple;
@@ -12,7 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -38,7 +39,6 @@ public class DemoController {
 
     @RequestMapping(value = "/export/excel",method= RequestMethod.POST,produces = ("application/json;charset=UTF-8"))
     void getCdEvaluateTemplateQuestsExcel(ModelMap map, HttpServletRequest request, HttpServletResponse response) {
-
         List<UserExcel> list = new ArrayList<>();
 
         List<User> listUser = userService.getAllUser();
@@ -57,5 +57,12 @@ public class DemoController {
         map.put(NormalExcelConstants.CLASS, UserExcel.class);
         map.put(NormalExcelConstants.PARAMS, params);
         PoiBaseView.render(map, request, response, NormalExcelConstants.EASYPOI_EXCEL_VIEW);
+    }
+
+    @RequestMapping(value = "/page/{pageNum}/{pageSize}",method= RequestMethod.GET,produces = ("application/json;charset=UTF-8"))
+    public Page<User> getUserByPage(@PathVariable Integer pageNum, @PathVariable Integer pageSize) {
+        Page<User>  userList= userService.getUserByPage(pageNum, pageSize);
+
+        return userList;
     }
 }
