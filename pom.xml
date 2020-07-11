@@ -5,6 +5,7 @@
 	<groupId>com.property.manage</groupId>
 	<artifactId>property-manage</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>propertyManage</name>
 	<description>Property Manage System</description>
 
@@ -299,13 +300,9 @@
 						<artifactId>mysql-connector-java</artifactId>
 						<version>${mysql.connector.version}</version>
 					</dependency>
-					<dependency>
-						<groupId>com.m2plat</groupId>
-						<artifactId>mybatis-gen-plugin</artifactId>
-						<version>${mybatis-gen-plugin.version}</version>
-					</dependency>
 				</dependencies>
 			</plugin>
+
 		</plugins>
 	</build>
 

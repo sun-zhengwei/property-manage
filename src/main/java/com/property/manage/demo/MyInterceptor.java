@@ -1,4 +1,4 @@
-package com.property.manage.Demo;
+package com.property.manage.demo;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,6 +1,6 @@
 package com.property.manage.controller;
 
-import com.property.manage.dao.model.UserEntity;
+import com.property.manage.dao.model.User;
 import com.property.manage.service.UserServiceImple;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,18 +16,20 @@ public class UserController {
     Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
-    private UserServiceImple testService ;
+    private UserServiceImple userService ;
 
     @RequestMapping(value = "/get/{id}",method = RequestMethod.GET)
-    public UserEntity test(@PathVariable Integer id){
+    public User test(@PathVariable Integer id){
         System.out.println("id:" + id);
-        return testService.getById(id);
+        User user = userService.getById(id);
+        return user;
     }
 
     @RequestMapping(value = "/update/{id}",method = RequestMethod.GET)
-    public UserEntity test1(@PathVariable Integer id){
+    public User test1(@PathVariable Integer id){
         System.out.println("id:" + id);
-        return testService.getById(id);
+        return userService.getById(id);
     }
+
 
 }

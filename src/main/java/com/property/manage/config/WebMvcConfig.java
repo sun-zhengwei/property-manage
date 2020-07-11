@@ -1,6 +1,6 @@
 package com.property.manage.config;
 
-import com.property.manage.Demo.MyInterceptor;
+import com.property.manage.demo.MyInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

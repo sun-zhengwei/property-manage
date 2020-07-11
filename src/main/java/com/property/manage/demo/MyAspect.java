@@ -1,4 +1,4 @@
-package com.property.manage.Demo;
+package com.property.manage.demo;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;

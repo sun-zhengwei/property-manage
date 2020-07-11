@@ -32,4 +32,11 @@
     select id, magic_id, first_name, last_name
     from user
   </select>
+
+  <!-- 根据主键查询-->
+  <select id="getById" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select  id, magic_id , first_name, last_name
+        from user
+        where id = #{id}
+    </select>
 </mapper>
