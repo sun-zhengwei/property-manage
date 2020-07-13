@@ -2,6 +2,7 @@ package com.property.manage.controller;
 
 import com.property.manage.dao.model.User;
 import com.property.manage.service.UserServiceImple;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,7 @@ public class UserController {
     @Autowired
     private UserServiceImple userService ;
 
+    // @RequiresPermissions("user:show")
     @RequestMapping(value = "/get/{id}",method = RequestMethod.GET)
     public User test(@PathVariable Integer id){
         System.out.println("id:" + id);
