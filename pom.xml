@@ -31,7 +31,7 @@
 		<tkmapper.version>3.5.3</tkmapper.version>
 		<druid.version>1.1.12</druid.version>
 		<druid-spring-boot-starter.version>1.1.10</druid-spring-boot-starter.version>
-		<shiro-spring-version>1.4.0</shiro-spring-version>
+		<shiro-spring-version>1.7.1</shiro-spring-version>
 		<shiro-ehcache-version>1.4.0</shiro-ehcache-version>
 		<guava.version>27.0-jre</guava.version>
 		<jackson.version>2.9.7</jackson.version>
