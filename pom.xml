@@ -60,7 +60,7 @@
 		<targetXMLPackage>mapper</targetXMLPackage>
 
 		<!--工程独有插件-->
-		<itextpdf.version>5.5.11</itextpdf.version>
+		<itextpdf.version>5.5.12</itextpdf.version>
 		<easypoi.version>4.0.0</easypoi.version>
 	</properties>
 
